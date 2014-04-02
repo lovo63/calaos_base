@@ -51,7 +51,7 @@ WebInputAnalog::~WebInputAnalog()
 void WebInputAnalog::readValue()
 {
   // Read the value
-    value = WebCtrl::Instance(get_params()).getValue(get_param("path"));
+    value = WebCtrl::Instance(get_params()).getValueDouble(get_param("path"));
     emitChange();
 }
 

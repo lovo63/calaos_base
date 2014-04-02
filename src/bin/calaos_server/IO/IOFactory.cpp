@@ -48,6 +48,7 @@
 #include <AVReceiver.h>
 #include <WebInputAnalog.h>
 #include <WebInputTemp.h>
+#include <WebOutputString.h>
 #include <GpioOutputSwitch.h>
 #include <GpioInputSwitch.h>
 #include <GpioInputSwitchLongPress.h>
@@ -296,6 +297,10 @@ Output *IOFactory::CreateOutput(std::string type, Params &params)
     else if (type == "GpioOutputSwitch")
     {
         out = new GpioOutputSwitch(params);
+    }
+    else if (type == "WebOutputString")
+    {
+        out = new WebOutputString(params);
     }
 
     if (out)
